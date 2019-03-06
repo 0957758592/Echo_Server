@@ -1,5 +1,6 @@
 package com.ozzot.echoserver.client;
 
+import com.ozzot.echoserver.utils.Checker;
 import com.ozzot.echoserver.utils.Constants;
 import com.ozzot.echoserver.service.ReaderWriter;
 
@@ -11,8 +12,11 @@ public class Client {
 
     public static void main(String[] args) throws IOException {
 
+        String host = Constants.HOST;
+        Checker.isNotNull(host);
+
         try (Socket socket = new Socket()) {
-            socket.connect(new InetSocketAddress(Constants.HOST, Constants.PORT), Constants.TIMEOUT);
+            socket.connect(new InetSocketAddress(host, Constants.PORT), Constants.TIMEOUT);
 
             ReaderWriter.readAndWriteData(socket, true);
 
