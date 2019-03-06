@@ -1,7 +1,7 @@
 package com.ozzot.echoserver.client;
 
 import com.ozzot.echoserver.utils.Constants;
-import com.ozzot.echoserver.utils.ReaderWriter;
+import com.ozzot.echoserver.service.ReaderWriter;
 
 import java.io.*;
 import java.net.InetSocketAddress;

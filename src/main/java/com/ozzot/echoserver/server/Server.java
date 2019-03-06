@@ -1,7 +1,7 @@
 package com.ozzot.echoserver.server;
 
 import com.ozzot.echoserver.utils.Constants;
-import com.ozzot.echoserver.utils.ReaderWriter;
+import com.ozzot.echoserver.service.ReaderWriter;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -12,7 +12,7 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
-        try (ServerSocket serverSocket = new ServerSocket(Constants.PORT, 1, InetAddress.getByName("localhost"))) {
+        try (ServerSocket serverSocket = new ServerSocket(Constants.PORT, Constants.COUNT_CONNECTIONS, InetAddress.getByName("localhost"))) {
 
             System.out.println("Server started: " + serverSocket);
             System.out.println("Waiting for a client ...");
