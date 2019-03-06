@@ -1,0 +1,11 @@
+/.idea
+/target
+/src/main/resources
+/src/main/java/com/ozzot/networking/
+/src/main/java/com/ozzot/Client.java
+/src/main/java/com/ozzot/Server.java
+/src/db.properties
+
+*.iml
+*.class
+*.txt
